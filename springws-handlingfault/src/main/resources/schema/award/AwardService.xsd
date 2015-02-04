@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+           targetNamespace="http://sachinhandiekar.com/service/AwardService"
+        >
+
+    <xs:element name="AwardServiceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="awardId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="AwardServiceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Status" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
