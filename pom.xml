@@ -8,13 +8,17 @@
 	<artifactId>springws-examples</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>springws-examples</name>
+	<name>Spring-WS :: Examples</name>
 
 	<modules>
 		<module>simple-springws</module>
 		<module>simple-springws-client</module>
 		<module>springws-handlingfault</module>
-	</modules>
+        <module>springws-logging</module>
+		<module>springws-testing</module>
+				<module>springws-static-wsdl</module>
+
+    </modules>
 
 
 	<properties>

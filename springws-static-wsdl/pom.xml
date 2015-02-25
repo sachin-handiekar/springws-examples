@@ -5,16 +5,16 @@
     <parent>
         <groupId>com.sachinhandiekar.examples.springws</groupId>
         <artifactId>springws-examples</artifactId>
-         <version>1.0-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <artifactId>springws-static-wsdl</artifactId>
 
-    <artifactId>simple-springws-client</artifactId>
-
-    <name>Spring-WS :: Simple Client</name>
+    <name>Spring-WS :: Static WSDL Example</name>
 
 
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
+
     <dependencies>
 
         <dependency>
@@ -36,6 +36,13 @@
             <groupId>org.springframework.ws</groupId>
             <artifactId>spring-ws-core</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ws</groupId>
+            <artifactId>spring-ws-test</artifactId>
+            <version>${org.springframework.ws.version}</version>
+        </dependency>
+
 
 
         <dependency>
@@ -63,7 +70,7 @@
     </dependencies>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>${artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -81,7 +88,7 @@
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
-                            <schemaDirectory>src/main/resources/schema/employee</schemaDirectory>
+                            <schemaDirectory>src/main/webapp/WEB-INF/wsdl</schemaDirectory>
 
                             <packageName>com.sachinhandiekar.service.employeeservice</packageName>
                             <staleFile>${project.build.directory}/generated-sources/.jaxb-staleFlag-employee</staleFile>

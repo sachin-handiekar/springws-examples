@@ -9,6 +9,10 @@
     </parent>
 
     <artifactId>springws-handlingfault</artifactId>
+
+    <name>Spring-WS :: Fault Handling</name>
+
+
     <packaging>war</packaging>
 
     <dependencies>
@@ -55,7 +59,7 @@
     </dependencies>
 
     <build>
-        <finalName>springws-handlingfault</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

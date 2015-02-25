@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.sachinhandiekar.ws.endpoint;
 
 import com.sachinhandiekar.service.awardservice.AwardServiceRequest;
@@ -25,8 +22,9 @@ public class AwardServiceEndpoint {
         AwardServiceResponse awardServiceResponse = new AwardServiceResponse();
         awardServiceResponse.setStatus(true);
 
-        if(request.getAwardId() == 1)
-        throw new Exception("Fault has occurred!!!");
+        if (request.getAwardId() == 1) {
+            throw new Exception("Fault has occurred!!!");
+        }
 
         return awardServiceResponse;
     }
@@ -40,11 +38,10 @@ public class AwardServiceEndpoint {
         AwardServiceResponse awardServiceResponse = new AwardServiceResponse();
         awardServiceResponse.setStatus(true);
 
-        if(request.getAwardId() == 1)
+        if (request.getAwardId() == 1)
             throw new Exception("Fault has occurred!!!");
 
         return awardServiceResponse;
     }
-
 
 }

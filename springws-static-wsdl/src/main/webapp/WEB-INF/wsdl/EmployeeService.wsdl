@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="http://sachinhandiekar.com/service/EmployeeService"
+                  targetNamespace="http://sachinhandiekar.com/service/EmployeeService">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   attributeFormDefault="unqualified"
+                   elementFormDefault="qualified">
+            <xs:import
+                    namespace="employeeServiceSchema.xsd"
+                    schemaLocation="employeeServiceSchema.xsd" />
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="CreateEmployeeResponse">
+        <wsdl:part
+                element="tns:CreateEmployeeResponse"
+                name="CreateEmployeeResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CreateEmployeeRequest">
+        <wsdl:part
+                element="tns:CreateEmployeeRequest"
+                name="CreateEmployeeRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="EmployeeService">
+        <wsdl:operation name="createEmployee">
+            <wsdl:input
+                    message="tns:CreateEmployeeRequest"
+                    name="CreateEmployeeRequest">
+            </wsdl:input>
+            <wsdl:output
+                    message="tns:CreateEmployeeResponse"
+                    name="CreateEmployeeResponse">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding
+            name="EmployeeServiceSoap11"
+            type="tns:EmployeeService">
+        <soap:binding
+                style="document"
+                transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="createEmployee">
+            <soap:operation soapAction="" />
+            <wsdl:input name="CreateEmployeeRequest">
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output name="CreateEmployeeResponse">
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CreateEmployeeServiceService">
+        <wsdl:port
+                binding="tns:EmployeeServiceSoap11"
+                name="EmployeeServiceSoap11">
+            <soap:address
+                    location="http://localhost:8080/springws-static-wsdl/EmployeeService" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

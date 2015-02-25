@@ -12,9 +12,9 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 
 public class EmployeeServiceClient {
 
-        static {
-            BasicConfigurator.configure();
-        }
+    static {
+        BasicConfigurator.configure();
+    }
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");

@@ -5,16 +5,16 @@
     <parent>
         <groupId>com.sachinhandiekar.examples.springws</groupId>
         <artifactId>springws-examples</artifactId>
-         <version>1.0-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <artifactId>springws-logging</artifactId>
 
-    <artifactId>simple-springws-client</artifactId>
-
-    <name>Spring-WS :: Simple Client</name>
+    <name>Spring-WS :: Logging</name>
 
 
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
+
     <dependencies>
 
         <dependency>
