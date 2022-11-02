@@ -23,7 +23,7 @@
 
 	<properties>
 		<org.springframework.version>3.1.0.RELEASE</org.springframework.version>
-		<org.springframework.ws.version>2.0.1.RELEASE</org.springframework.ws.version>
+		<org.springframework.ws.version>3.1.4</org.springframework.ws.version>
 		<junit.version>4.8.1</junit.version>
 		<log4j.version>1.2.16</log4j.version>
 
